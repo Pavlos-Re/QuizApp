@@ -6,6 +6,7 @@
     <string name="app_introduction">A project made by:</string>
     <string name="app_rights">All Rights Reserved \u00a9</string>
     <string name="app_begin_but">Begin</string>
-    <string name="app_onoff_mus">Sound ON/OFF</string>
+    <string name="app_on_mus">Sound ON</string>
+    <string name="app_off_mus">Sound OFF</string>
 
 </resources>
