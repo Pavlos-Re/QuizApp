@@ -1,3 +1,11 @@
 <resources>
+
     <string name="app_name">My Application</string>
+    <string name="name_creator0">Marios-Stamatis Katsaros</string>
+    <string name="name_creator1">Pavlos Repin</string>
+    <string name="app_introduction">A project made by:</string>
+    <string name="app_rights">All Rights Reserved \u00a9</string>
+    <string name="app_begin_but">Begin</string>
+    <string name="app_onoff_mus">Sound ON/OFF</string>
+
 </resources>
