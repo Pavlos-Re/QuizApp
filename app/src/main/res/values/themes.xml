@@ -23,8 +23,4 @@
 
     <style name="Theme.MyApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="Button.Green" parent="ThemeOverlay.AppCompat">
-        <item name="colorAccent">@android:color/holo_green_dark</item>
-    </style>
-
 </resources>
