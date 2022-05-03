@@ -5,7 +5,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -23,11 +25,19 @@ public class MainMenu extends AppCompatActivity {
         context = this;
         final MediaPlayer media2 = MediaPlayer.create(this, R.raw.pop);
         setContentView(R.layout.activity_main_menu);
-        Button button = (Button) findViewById(R.id.fact_button);
+        Button button_fact = (Button) findViewById(R.id.fact_button);
         //the function that prints the fun fact in the textview will be called when the button is clicked
-        button.setOnClickListener(v -> {
+        button_fact.setOnClickListener(v -> {
             media2.start();
             getFact();
+        });
+        Button button_subject = (Button) findViewById(R.id.choose_subject_button);
+        button_subject.setOnClickListener(v -> {
+            media2.start();
+        });
+        Button button_high_score = (Button) findViewById(R.id.check_highscores_button);
+        button_high_score.setOnClickListener(v -> {
+            media2.start();
         });
         }
         //adding functionality for the back-button of
@@ -73,6 +83,8 @@ public class MainMenu extends AppCompatActivity {
         //the string that corresponds to that number will appear in the text view.
         int fun_fact = RANDOM.nextInt(FACTS.length);
         fun.setText(FACTS[fun_fact]);
+        ImageView image = findViewById(R.id.smart_pic);
+        image.setVisibility(View.VISIBLE);
     }
     }
 
