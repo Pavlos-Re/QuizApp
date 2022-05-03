@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button = (Button) findViewById(R.id.button_begin);
-        Button button2 = (Button) findViewById(R.id.button_sound_on_off);
+        Button button = findViewById(R.id.button_begin);
+        Button button2 = findViewById(R.id.button_sound_on_off);
 
 
         button.setOnClickListener(v -> {
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         media.setLooping(true);
         button2.setOnClickListener(v -> {
 
-            if (media.isPlaying() == false) {
+            if (!media.isPlaying()) {
                 button2.setText(R.string.app_on_mus);
                 media.start();
 

@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="305dp"
-        android:layout_height="48dp"
+        android:layout_width="307dp"
+        android:layout_height="56dp"
         android:fontFamily="casual"
         android:text="@string/app_introduction"
         android:textAppearance="@style/TextAppearance.AppCompat.Display4"
