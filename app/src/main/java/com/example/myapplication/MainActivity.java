@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final MediaPlayer media2 = MediaPlayer.create(this, R.raw.pop);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -22,24 +23,31 @@ public class MainActivity extends AppCompatActivity {
 
 
         button.setOnClickListener(v -> {
+            media2.start();
             Intent intent = new Intent(MainActivity.this, MainMenu.class);
             startActivity(intent);
         });
         final MediaPlayer media = MediaPlayer.create(this, R.raw.street_soul);
+
         media.setLooping(true);
         button2.setOnClickListener(v -> {
 
             if (!media.isPlaying()) {
                 button2.setText(R.string.app_on_mus);
+                media2.start();
                 media.start();
 
             } else {
                 media.pause();
+                media2.start();
                 button2.setText(R.string.app_off_mus);
             }
         });
 
     }
+
+
+
 
     @Override
     public void onBackPressed() {
@@ -59,4 +67,5 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog alert = builder.create();
         alert.show();
     }
+
 }

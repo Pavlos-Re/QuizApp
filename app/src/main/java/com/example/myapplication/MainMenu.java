@@ -3,6 +3,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -20,14 +21,16 @@ public class MainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
+        final MediaPlayer media2 = MediaPlayer.create(this, R.raw.pop);
         setContentView(R.layout.activity_main_menu);
         Button button = (Button) findViewById(R.id.fact_button);
         //the function that prints the fun fact in the textview will be called when the button is clicked
         button.setOnClickListener(v -> {
+            media2.start();
             getFact();
         });
         }
-        //adding functionality for the back button of the mobile phone
+        //adding functionality for the back-button of
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -43,7 +46,7 @@ public class MainMenu extends AppCompatActivity {
                         dialog.cancel();
                     }
                 });
-        AlertDialog alert = builder.create(); //creating the prompt
+        AlertDialog alert = builder.create();
         alert.show();
 
     }
