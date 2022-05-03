@@ -8,5 +8,9 @@
     <string name="app_begin_but">Begin</string>
     <string name="app_on_mus">Sound ON</string>
     <string name="app_off_mus">Sound OFF</string>
+    <string name="choose_subj">CHOOSE SUBJECT</string>
+    <string name="check_high">CHECK HIGHSCORES</string>
+
+
 
 </resources>

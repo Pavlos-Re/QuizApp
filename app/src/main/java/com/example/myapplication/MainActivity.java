@@ -1,7 +1,9 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -27,16 +29,34 @@ public class MainActivity extends AppCompatActivity {
         media.setLooping(true);
         button2.setOnClickListener(v -> {
 
-                if(media.isPlaying()==false) {
-                    button2.setText(R.string.app_on_mus);
-                    media.start();
+            if (media.isPlaying() == false) {
+                button2.setText(R.string.app_on_mus);
+                media.start();
 
-                }
-                else {
-                    media.pause();
-                    button2.setText(R.string.app_off_mus);
-                }
+            } else {
+                media.pause();
+                button2.setText(R.string.app_off_mus);
+            }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        MainActivity.this.finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }
