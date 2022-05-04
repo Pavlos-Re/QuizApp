@@ -3,6 +3,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -34,11 +35,14 @@ public class MainMenu extends AppCompatActivity {
         Button button_subject = (Button) findViewById(R.id.choose_subject_button);
         button_subject.setOnClickListener(v -> {
             media2.start();
+            Intent intent = new Intent(MainMenu.this, SubjectList.class);
+            startActivity(intent);
         });
         Button button_high_score = (Button) findViewById(R.id.check_highscores_button);
         button_high_score.setOnClickListener(v -> {
             media2.start();
         });
+
         }
         //adding functionality for the back-button of
     @Override
@@ -86,7 +90,7 @@ public class MainMenu extends AppCompatActivity {
         ImageView image = findViewById(R.id.smart_pic);
         image.setVisibility(View.VISIBLE);
     }
-    }
+}
 
 
 
