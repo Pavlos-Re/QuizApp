@@ -18,19 +18,34 @@ import java.util.Random;
 public class MainMenu extends AppCompatActivity {
     private static final Random RANDOM = new Random(); //this will be used for the random fun fact
     private static Context context; //creating context to get the string from the xml file
-
+    Button button2;
+    MediaPlayer media;
+    MediaPlayer media2;
+    int counter = 0;
+    ImageView image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
-        final MediaPlayer media2 = MediaPlayer.create(this, R.raw.pop);
+        media2 = MediaPlayer.create(this, R.raw.pop);
+        media = MediaPlayer.create(this, R.raw.street_soul);
         setContentView(R.layout.activity_main_menu);
+        TextView fun = (TextView)findViewById(R.id.textView);
         Button button_fact = (Button) findViewById(R.id.fact_button);
         //the function that prints the fun fact in the textview will be called when the button is clicked
         button_fact.setOnClickListener(v -> {
+            counter++;
             media2.start();
-            getFact();
+            if(counter==1)
+                getFact();
+            else {
+                fun.setText("");
+                counter=0;
+                image = findViewById(R.id.smart_pic);
+                image.setVisibility(View.INVISIBLE);
+            }
+
         });
         Button button_subject = (Button) findViewById(R.id.choose_subject_button);
         button_subject.setOnClickListener(v -> {
@@ -47,6 +62,9 @@ public class MainMenu extends AppCompatActivity {
         //adding functionality for the back-button of
     @Override
     public void onBackPressed() {
+
+        button2 = findViewById(R.id.button_sound_on_off);
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Go back to start menu?")
                 .setCancelable(false)
@@ -87,7 +105,7 @@ public class MainMenu extends AppCompatActivity {
         //the string that corresponds to that number will appear in the text view.
         int fun_fact = RANDOM.nextInt(FACTS.length);
         fun.setText(FACTS[fun_fact]);
-        ImageView image = findViewById(R.id.smart_pic);
+        image = findViewById(R.id.smart_pic);
         image.setVisibility(View.VISIBLE);
     }
 }

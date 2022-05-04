@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -12,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     Button button2;
     int backButtonCount = 0;
+    boolean homePressed = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,19 +50,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        System.out.println("Status: OnPause");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        homePressed = true;
         button2 = findViewById(R.id.button_sound_on_off);
+        if(!media.isPlaying())
         button2.setText(R.string.app_off_mus);
         System.out.println("Status: OnResume");
     }
 
     @Override
     public void onBackPressed() {
+        homePressed = false;
         System.out.println("Status: OnBackPressed");
         if (backButtonCount >= 1) {
             if (media != null) media.pause();
@@ -85,4 +90,5 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         System.out.println("Status: OnDestroy");
     }
+
 }
