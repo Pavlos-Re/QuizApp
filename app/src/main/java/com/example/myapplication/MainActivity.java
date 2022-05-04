@@ -12,17 +12,24 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+    MediaPlayer media;
+    Button button;
+    Button button2;
     int backButtonCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        final MediaPlayer media2 = MediaPlayer.create(this, R.raw.pop);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final MediaPlayer media2 = MediaPlayer.create(MainActivity.this, R.raw.pop );
+         media = MediaPlayer.create(this, R.raw.street_soul);
+        button = findViewById(R.id.button_begin);
+        button2 = findViewById(R.id.button_sound_on_off);
 
-        Button button = findViewById(R.id.button_begin);
-        Button button2 = findViewById(R.id.button_sound_on_off);
+
+
+
+
 
 
         button.setOnClickListener(v -> {
@@ -30,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, MainMenu.class);
             startActivity(intent);
         });
-        final MediaPlayer media = MediaPlayer.create(this, R.raw.street_soul);
+
 
         media.setLooping(true);
         button2.setOnClickListener(v -> {
@@ -49,8 +56,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+@Override
+protected void onPause() {
+    super.onPause();
+    if (media != null) media.pause();
 
+}
+@Override
+protected void onResume() {
+        super.onResume();
+       button2 = findViewById(R.id.button_sound_on_off);
+       button2.setText(R.string.app_off_mus);
 
+}
 
     @Override
     public void onBackPressed() {
