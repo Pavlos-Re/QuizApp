@@ -8,7 +8,6 @@
     android:backgroundTint="@null"
     tools:context=".MainMenu">
 
-
     <Button
         android:id="@+id/choose_subject_button"
         android:layout_width="238dp"
@@ -86,15 +85,15 @@
 
     <ImageView
         android:id="@+id/smart_pic"
-        android:layout_width="52dp"
-        android:layout_height="51dp"
+        android:layout_width="118dp"
+        android:layout_height="128dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/fact_button"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.644"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.689"
-        app:srcCompat="@drawable/brain" />
+        app:layout_constraintVertical_bias="0.73"
+        app:srcCompat="@drawable/thought" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
