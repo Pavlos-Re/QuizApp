@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.KeyEvent;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -13,6 +11,8 @@ public class MainActivity extends AppCompatActivity {
     MediaPlayer media;
     Button button;
     Button button2;
+    Button button3;
+    Button button4;
     int backButtonCount = 0;
     boolean homePressed = false;
 
@@ -24,11 +24,17 @@ public class MainActivity extends AppCompatActivity {
         media = MediaPlayer.create(this, R.raw.street_soul);
         button = findViewById(R.id.button_begin);
         button2 = findViewById(R.id.button_sound_on_off);
+        button3 = findViewById(R.id.button_about);
 
         button.setOnClickListener(v -> {
             media2.start();
             Intent intent = new Intent(MainActivity.this, MainMenu.class);
             startActivity(intent);
+        });
+        button3.setOnClickListener(v -> {
+            media2.start();
+            Intent intent2 = new Intent(MainActivity.this, About.class);
+            startActivity(intent2);
         });
 
         media.setLooping(true);
