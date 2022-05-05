@@ -28,6 +28,7 @@
         android:layout_height="424dp"
         android:fontFamily="casual"
         android:text="@string/description"
+        android:textColor="@color/white"
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
