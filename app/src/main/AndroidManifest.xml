@@ -13,7 +13,7 @@
             android:name=".SubjectList"
             android:exported="false" />
         <activity
-            android:name=".High_Scores"
+            android:name=".HighScores"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity

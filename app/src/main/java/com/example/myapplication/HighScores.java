@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class High_Scores extends AppCompatActivity {
+public class HighScores extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -21,6 +21,11 @@
     <string name="fact8">Tigers have striped skin, not just striped fur.</string>
     <string name="fact9">An ostrich\'s eye is bigger than its brain.</string>
     <string name="fact10">A cat has 32 muscles in each ear.</string>
+    <string name="subject1">Computer Vision</string>
+    <string name="subject2">Databases</string>
+    <string name="subject3">Internet Security</string>
+    <string name="subject4">Physics</string>
+    <string name="subject5">Maths</string>
 
 
 </resources>

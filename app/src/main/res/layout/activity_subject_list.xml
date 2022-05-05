@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/whiteboard"
     tools:context=".SubjectList">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/computer_vision_icon"
         android:layout_width="71dp"
         android:layout_height="63dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,7 +20,7 @@
         app:srcCompat="@drawable/computer_vision" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/data_bases_icon"
         android:layout_width="71dp"
         android:layout_height="63dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,7 +32,7 @@
         app:srcCompat="@drawable/databases" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/internet_security_icon"
         android:layout_width="71dp"
         android:layout_height="63dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,7 +44,7 @@
         app:srcCompat="@drawable/internet_security" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/physics_icon"
         android:layout_width="71dp"
         android:layout_height="63dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -55,7 +56,7 @@
         app:srcCompat="@drawable/physics" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/maths_icon"
         android:layout_width="71dp"
         android:layout_height="63dp"
         android:layout_marginBottom="1dp"
@@ -71,12 +72,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="428dp"
-        android:text="Computer Vision"
+        android:text="@string/subject1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.146"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/computer_vision_icon"
         app:layout_constraintVertical_bias="0.0"/>
 
     <TextView
@@ -85,12 +86,12 @@
         android:layout_height="17dp"
         android:layout_marginTop="1dp"
         android:layout_marginBottom="428dp"
-        android:text="Databases"
+        android:text="@string/subject2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.785"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/data_bases_icon"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -98,12 +99,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="252dp"
-        android:text="Physics"
+        android:text="@string/subject4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintHorizontal_bias="0.203"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/internet_security_icon"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -112,12 +113,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
         android:layout_marginBottom="256dp"
-        android:text="Internet Security"
+        android:text="@string/subject3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintHorizontal_bias="0.818"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/physics_icon"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -126,10 +127,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
         android:layout_marginBottom="112dp"
-        android:text="Maths"
+        android:text="@string/subject5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/maths_icon"
         app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
