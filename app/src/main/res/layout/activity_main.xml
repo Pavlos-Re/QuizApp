@@ -6,7 +6,24 @@
     android:layout_height="match_parent"
     android:background="@drawable/whiteboard"
     tools:context=".MainActivity"
+    android:id="@+id/lay"
     android:icon="@drawable/pic">
+
+    <Button
+        android:id="@+id/button_calc"
+        android:layout_width="120sp"
+        android:layout_height="50sp"
+        android:backgroundTint="@color/black"
+        android:text="@string/button_calc"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.733" />
 
     <Button
         android:id="@+id/button_about"
@@ -22,7 +39,7 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.628" />
+        app:layout_constraintVertical_bias="0.599" />
 
     <TextView
         android:id="@+id/textView5"
@@ -86,14 +103,16 @@
         android:layout_width="120sp"
         android:layout_height="50sp"
         android:backgroundTint="@color/black"
-        android:textColor="@color/white"
         android:text="@string/app_begin_but"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.453" />
 
     <Button
         android:id="@+id/button_sound_on_off"
