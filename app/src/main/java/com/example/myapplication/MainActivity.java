@@ -15,7 +15,10 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -30,23 +33,14 @@ public class MainActivity extends AppCompatActivity {
     Button button4;
     int backButtonCount = 0;
     boolean homePressed = false;
-    private static final int RESULT_LOAD_IMAGE = 5164654;;
+    EditText e1, e2;
+    TextView t1;
+    int num1, num2;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        ArrayList<HashMap<String,Object>> items =new ArrayList<HashMap<String,Object>>();
-
-        final PackageManager pm = getPackageManager();
-        List<PackageInfo> packs = pm.getInstalledPackages(0);
-        for (PackageInfo pi : packs) {
-            if( pi.packageName.toString().toLowerCase().contains("calcul")){
-                HashMap<String, Object> map = new HashMap<String, Object>();
-                map.put("appName", pi.applicationInfo.loadLabel(pm));
-                map.put("packageName", pi.packageName);
-                items.add(map);
-            }
-        }
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -57,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
         button2 = findViewById(R.id.button_sound_on_off);
         button3 = findViewById(R.id.button_about);
         button4 = findViewById(R.id.button_calc);
+
+
 
 
 
@@ -74,19 +70,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         button4.setOnClickListener(v -> {
-            if(items.size()>=1){
-                media2.start();
-                String packageName = (String) items.get(0).get("packageName");
-                Intent i = pm.getLaunchIntentForPackage(packageName);
-                if (i != null)
-                    startActivity(i);
-            }
-            else{Toast.makeText(MainActivity.this,
-                    "Calculator App does not exist",
-                    Toast.LENGTH_SHORT).show();
-                    media2.start();
-            }
-
+            media2.start();
+            Intent intent3 = new Intent(MainActivity.this, Calculator.class);
+            startActivity(intent3);
                 });
 
         media.setLooping(true);
