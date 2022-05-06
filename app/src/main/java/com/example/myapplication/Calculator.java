@@ -49,14 +49,15 @@ public class Calculator extends AppCompatActivity {
         String s2 = e2.getText().toString();
 
         // condition to check if box is not empty
-        if ((s1.equals(null) && s2.equals(null))
-                || (s1.equals("") && s2.equals(""))) {
+        if ((s1.equals("") || s2.equals(""))) {
 
-            String result = "Please enter a value";
+            String result = "Please enter both values";
             t1.setText(result);
 
             return false;
-        } else {
+        }
+
+        else {
             // converting string to int.
             num1 = Integer.parseInt(s1);
 
