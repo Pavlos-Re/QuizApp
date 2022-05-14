@@ -9,8 +9,8 @@
 
     <Button
         android:id="@+id/button_cool"
-        android:layout_width="127dp"
-        android:layout_height="66dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="#2F2F32"
         android:text="@string/cool"
         android:textColor="@color/white"
@@ -24,8 +24,8 @@
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="362dp"
-        android:layout_height="424dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:text="@string/description"
         android:textColor="@color/white"

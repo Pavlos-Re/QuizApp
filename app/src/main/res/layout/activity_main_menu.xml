@@ -10,8 +10,8 @@
 
     <Button
         android:id="@+id/choose_subject_button"
-        android:layout_width="238dp"
-        android:layout_height="54dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="#36F449"
         android:elevation="20dp"
         android:fontFamily="casual"
@@ -30,8 +30,8 @@
 
     <Button
         android:id="@+id/check_highscores_button"
-        android:layout_width="238dp"
-        android:layout_height="74dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="#9C27B0"
         android:elevation="20dp"
         android:fontFamily="casual"
@@ -54,8 +54,8 @@
 
     <Button
         android:id="@+id/fact_button"
-        android:layout_width="68dp"
-        android:layout_height="52dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="#CDDC39"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/fact"
@@ -75,24 +75,26 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="400dp"
         android:fontFamily="sans-serif-black"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.604" />
 
     <ImageView
         android:id="@+id/smart_pic"
-        android:layout_width="118dp"
-        android:layout_height="128dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.734"
+        app:layout_constraintVertical_bias="0.719"
         app:srcCompat="@drawable/thought" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

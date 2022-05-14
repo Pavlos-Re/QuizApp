@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="name_creator0">Μάριος-Σταμάτης Κατσάρος</string>
+    <string name="name_creator1">Παύλος Ρέπιν</string>
+    <string name="app_introduction">Ένα πρότζεκτ φτιαγμένο από τους:</string>
+    <string name="app_rights">Με επιφύλαξη παντός δικαιώματος \u00a9</string>
+    <string name="app_begin_but">ΑΡΧΉ</string>
+    <string name="app_on_mus">\u23f9</string>
+    <string name="app_off_mus">🎵</string>
+    <string name="choose_subj">ΕΠΙΛΟΓΉ ΜΑΘΉΜΑΤΟΣ</string>
+    <string name="check_high">ΕΛΕΓΧΟΣ ΣΚΟΡ</string>
+    <string name="fact">ενδιαφέρον γεγονός</string>
+    <string name="fact1">Οι κροκόδειλοι δεν μπορούν να βγάλουν τη γλώσσα έξω.</string>
+    <string name="fact2">Η καρδιά της γαρίδας είναι στο κεφάλι της.</string>
+    <string name="fact3">Μερικά κραγιόν περιέχουν λέπια ψαριών.</string>
+    <string name="fact4">Αν φτερνιστείς πολύ δυνατά, μπορεί να σπάσεις πλευρό.</string>
+    <string name="fact5">Τα αμύγδαλα είναι μέρος της οικογένειας ροδάκινων.</string>
+    <string name="fact6">Οι περισσότεροι άνθρωποι αποκοιμούνται σε 7 λεπτά.</string>
+    <string name="fact7">Μία λίρα έχει 118 ράχες γύρω από την άκρη της.</string>
+    <string name="fact8">Το δέρμα μιας τίγρη έχει ρίγες, όπως και η γούνα της.</string>
+    <string name="fact9">Το μάτι μιας στρουθοκάμηλου είναι μεγαλύτερο από τον εγκέφαλό της.</string>
+    <string name="fact10">Οι γάτες έχουν 32 μυς σε κάθε μάτι.</string>
+    <string name="subject1">Όραση υπολογιστών</string>
+    <string name="subject2">Βάσεις Δεδομένων</string>
+    <string name="subject3">Ασφάλεια Διαδικτύου</string>
+    <string name="subject4">Φυσική</string>
+    <string name="subject5">Μαθηματικά</string>
+    <string name="about">ΣΧΕΤΙΚΑ</string>
+    <string name="button_calc">ΑΡΙΘΜΟΜΗΧΑΝΗ</string>
+    <string name="button_back">ΠΙΣΩ</string>
+    <string name="description">
+        Θέλεις να εμβαθύνεις τις γνώσεις σου ή να δοκιμάσεις τις ικανότητές σου σε διάφορα μαθήματα;
+        Αν ναι, τότε αυτή η εφαρμογή είναι για σένα! Υπάρχουν πολλά διαφορετικά μαθήματα για να διαλέξεις,
+        το καθένα από τα οποία περιέχει διάφορες ερωτήσεις που θα δοκιμάσουν την εμπειριά σου σε κάθε πεδίο.
+        Πιστεύεις ότι έχεις τα προσόντα? Τι περιμένεις τότε? Δοκίμασε ένα από τα τεστ!
+    </string>
+    <string name="cool">Εντάξει!</string>
+    <string name="calc">ΑΡΙΘΜΟΜΗΧΑΝΗ</string>
+    <string name="num1">Πρώτο Νούμερο</string>
+    <string name="num2">Δεύτερο Νούμερο</string>
+</resources>

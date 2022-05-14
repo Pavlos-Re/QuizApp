@@ -27,6 +27,7 @@ public class MainMenu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         context = this;
         media2 = MediaPlayer.create(this, R.raw.pop);
         media = MediaPlayer.create(this, R.raw.street_soul);

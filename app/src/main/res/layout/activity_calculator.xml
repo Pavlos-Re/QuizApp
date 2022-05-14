@@ -28,24 +28,20 @@
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="194dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="114dp"
-        android:layout_marginTop="58dp"
-        android:layout_marginEnd="103dp"
-        android:layout_marginBottom="502dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:scrollbarSize="30dp"
-        android:text="CALCULATOR"
+        android:text="@string/calc"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/white"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.16" />
+        app:layout_constraintVertical_bias="0.092" />
 
     <EditText
         android:id="@+id/num1"
@@ -58,7 +54,7 @@
         android:background="@android:color/white"
         android:backgroundTint="@color/white"
         android:ems="10"
-        android:hint="First number"
+        android:hint="@string/num1"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,18 +73,13 @@
         android:background="@android:color/white"
         android:backgroundTint="@color/white"
         android:ems="10"
-        android:hint="Second number"
+        android:hint="@string/num2"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Text View to display result -->
-
-    <!-- A button to perform 'sum' operation -->
-
-    <!-- A button to perform subtraction operation. -->
 
     <TextView
         android:id="@+id/result"
@@ -109,9 +100,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.601" />
 
-    <!-- A button to perform division. -->
-
-    <!-- A button to perform multiplication. -->
 
     <Button
         android:id="@+id/sum"
@@ -167,8 +155,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.68" />
 
-    <!-- A button to perform a modulus function. -->
-
-    <!-- A button to perform a power function. -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

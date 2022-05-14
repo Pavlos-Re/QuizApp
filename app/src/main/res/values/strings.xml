@@ -6,8 +6,8 @@
     <string name="app_introduction">A project made by:</string>
     <string name="app_rights">All Rights Reserved \u00a9</string>
     <string name="app_begin_but">Begin</string>
-    <string name="app_on_mus">Sound ON</string>
-    <string name="app_off_mus">Sound OFF</string>
+    <string name="app_off_mus">🎵</string>
+    <string name="app_on_mus">\u23f9</string>
     <string name="choose_subj">CHOOSE SUBJECT</string>
     <string name="check_high">CHECK HIGHSCORES</string>
     <string name="fact">fun fact</string>
@@ -35,6 +35,10 @@
         have what it takes? Then what are you waiting for? Go ahead and try a quiz for yourself!
     </string>
     <string name="cool">OK, cool!</string>
+    <string name="calc">CALCULATOR</string>
+    <string name="num1">First number</string>
+    <string name="num2">Second number</string>
+
 
 
 </resources>

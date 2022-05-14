@@ -2,17 +2,17 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lay"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/whiteboard"
-    tools:context=".MainActivity"
-    android:id="@+id/lay"
-    android:icon="@drawable/pic">
+    android:icon="@drawable/pic"
+    tools:context=".MainActivity">
 
     <Button
         android:id="@+id/button_calc"
-        android:layout_width="120sp"
-        android:layout_height="50sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
         android:text="@string/button_calc"
         android:textColor="@color/white"
@@ -23,12 +23,12 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.733" />
+        app:layout_constraintVertical_bias="0.666" />
 
     <Button
         android:id="@+id/button_about"
-        android:layout_width="120sp"
-        android:layout_height="50sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
         android:text="@string/about"
         android:textColor="@color/white"
@@ -39,12 +39,12 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.599" />
+        app:layout_constraintVertical_bias="0.533" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="307dp"
-        android:layout_height="56dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:text="@string/app_introduction"
         android:textAppearance="@style/TextAppearance.AppCompat.Display4"
@@ -75,8 +75,8 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="96dp"
         android:fontFamily="casual"
         android:text="@string/name_creator1"
         android:textColor="@color/white"
@@ -86,8 +86,8 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="171dp"
-        android:layout_height="19dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/app_rights"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -100,8 +100,8 @@
 
     <Button
         android:id="@+id/button_begin"
-        android:layout_width="120sp"
-        android:layout_height="50sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
         android:text="@string/app_begin_but"
         android:textColor="@color/white"
@@ -112,7 +112,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.453" />
+        app:layout_constraintVertical_bias="0.408" />
 
     <Button
         android:id="@+id/button_sound_on_off"
@@ -129,5 +129,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.918" />
+
+    <ImageView
+        android:id="@+id/greek_flag"
+        android:layout_width="37dp"
+        android:layout_height="29dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92"
+        app:srcCompat="@drawable/flag_gr" />
+
+    <ImageView
+        android:id="@+id/uk_flag"
+        android:layout_width="37dp"
+        android:layout_height="29dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92"
+        app:srcCompat="@drawable/flag_uk" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

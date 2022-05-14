@@ -1,11 +1,18 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -18,44 +25,51 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends localeHelper {
     MediaPlayer media;
     Button button;
     Button button2;
     Button button3;
     Button button4;
+    ImageView gr;
+    ImageView en;
     int backButtonCount = 0;
     boolean homePressed = false;
     EditText e1, e2;
     TextView t1;
     int num1, num2;
-
-
+    private static Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        context = getBaseContext();
+
+
+        //change actionbar title, if you dont change it will be according to your sustems default lang
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(getResources().getString(R.string.app_name));
+
         //Drawable d = Drawable.createFromPath(R.drawable.databases);
         final MediaPlayer media2 = MediaPlayer.create(MainActivity.this, R.raw.pop );
         media = MediaPlayer.create(this, R.raw.street_soul);
+
         button = findViewById(R.id.button_begin);
         button2 = findViewById(R.id.button_sound_on_off);
         button3 = findViewById(R.id.button_about);
         button4 = findViewById(R.id.button_calc);
-
-
-
-
-
+        gr = findViewById(R.id.greek_flag);
+        en = findViewById(R.id.uk_flag);
 
         button.setOnClickListener(v -> {
             media2.start();
@@ -75,6 +89,22 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent3);
                 });
 
+        gr.setOnClickListener(v -> {
+            media2.start();
+            media.stop();
+            localeHelper.setLocale(this, "el");
+            startActivity(new Intent(MainActivity.this, MainActivity.class));
+            finish();
+
+        });
+        en.setOnClickListener(v -> {
+            media2.start();
+            media.stop();
+            localeHelper.setLocale(this, "en");
+            startActivity(new Intent(MainActivity.this, MainActivity.class));
+            finish();
+
+        });
         media.setLooping(true);
         button2.setOnClickListener(v -> {
 
@@ -91,6 +121,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(localeHelper.onAttach(base, "en"));
+    }
 
     @Override
     protected void onPause() {
@@ -135,5 +169,8 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         System.out.println("Status: OnDestroy");
     }
+    public static Context getAppContext() {
+        return context;
+    }
 
-}
+    }
