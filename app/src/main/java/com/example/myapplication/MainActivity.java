@@ -48,9 +48,11 @@ public class MainActivity extends localeHelper {
     TextView t1;
     int num1, num2;
     private static Context context;
+    String current;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        current = Locale.getDefault().getLanguage();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = getBaseContext();
@@ -91,19 +93,23 @@ public class MainActivity extends localeHelper {
 
         gr.setOnClickListener(v -> {
             media2.start();
-            media.stop();
-            localeHelper.setLocale(this, "el");
-            startActivity(new Intent(MainActivity.this, MainActivity.class));
-            finish();
 
+            if(!current.equals("el")) {
+                media.stop();
+                localeHelper.setLocale(this, "el");
+                startActivity(new Intent(MainActivity.this, MainActivity.class));
+                finish();
+            }
         });
         en.setOnClickListener(v -> {
-            media2.start();
-            media.stop();
-            localeHelper.setLocale(this, "en");
-            startActivity(new Intent(MainActivity.this, MainActivity.class));
-            finish();
 
+            media2.start();
+            if(!current.equals("en")) {
+                media.stop();
+                localeHelper.setLocale(this, "en");
+                startActivity(new Intent(MainActivity.this, MainActivity.class));
+                finish();
+            }
         });
         media.setLooping(true);
         button2.setOnClickListener(v -> {
