@@ -1,4 +1,5 @@
 package com.example.myapplication;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
@@ -10,9 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-
-
 import java.util.Random;
 
 public class MainMenu extends AppCompatActivity {

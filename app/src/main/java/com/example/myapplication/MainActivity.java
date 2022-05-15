@@ -35,6 +35,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends localeHelper {
+
     MediaPlayer media;
     Button button;
     Button button2;
@@ -56,6 +57,7 @@ public class MainActivity extends localeHelper {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = getBaseContext();
+
 
 
         //change actionbar title, if you dont change it will be according to your sustems default lang
