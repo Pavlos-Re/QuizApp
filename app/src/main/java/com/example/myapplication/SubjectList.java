@@ -44,4 +44,5 @@ public class SubjectList extends AppCompatActivity {
         button_back.setOnClickListener(view -> finish());
 
     }
+
 }

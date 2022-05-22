@@ -38,4 +38,5 @@
     <string name="calc">ΑΡΙΘΜΟΜΗΧΑΝΗ</string>
     <string name="num1">Πρώτο Νούμερο</string>
     <string name="num2">Δεύτερο Νούμερο</string>
+    <string name="button_next">Επόμενο</string>
 </resources>

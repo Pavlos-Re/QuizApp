@@ -38,6 +38,7 @@
     <string name="calc">CALCULATOR</string>
     <string name="num1">First number</string>
     <string name="num2">Second number</string>
+    <string name="button_next">Next</string>
 
 
 </resources>

@@ -1,10 +1,11 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,7 +22,14 @@ public class Test extends  AppCompatActivity {
             getTest();
         }
 
+        Button next_ques = (Button) findViewById(R.id.button_next);
+
+        next_ques.setOnClickListener(v -> getTest()
+
+        );
+
     }
+
         public void getTest() {
 
             TextView question = findViewById(R.id.question);
@@ -37,6 +45,11 @@ public class Test extends  AppCompatActivity {
             option2.setText(TestInfo.List_Questions_Maths[numberQ][2]);
             option3.setText(TestInfo.List_Questions_Maths[numberQ][3]);
             option4.setText(TestInfo.List_Questions_Maths[numberQ][4]);
+
+            option1.setTextColor(Color.WHITE);
+            option2.setTextColor(Color.WHITE);
+            option3.setTextColor(Color.WHITE);
+            option4.setTextColor(Color.WHITE);
 
             check(numberQ);
 
@@ -55,11 +68,12 @@ public class Test extends  AppCompatActivity {
                 try {
                     if (Integer.parseInt(TestInfo.List_Questions_Maths[numberQ][5]) == 1) {
                         Toast.makeText(context,"Correct!", Toast.LENGTH_SHORT).show();
+                        option1.setTextColor(Color.GREEN);
                     }
                     else {
                         Toast.makeText(context,"Wrong!", Toast.LENGTH_SHORT).show();
+                        option1.setTextColor(Color.RED);
                     }
-                    getTest();
                 } catch (NumberFormatException ex) {
                     // Display message when exception occurs
                     System.out.println("--ERROR--");
@@ -69,11 +83,12 @@ public class Test extends  AppCompatActivity {
                 try {
                     if (Integer.parseInt(TestInfo.List_Questions_Maths[numberQ][5]) == 2) {
                         Toast.makeText(context,"Correct!", Toast.LENGTH_SHORT).show();
+                        option2.setTextColor(Color.GREEN);
                     }
                     else {
                         Toast.makeText(context,"Wrong!", Toast.LENGTH_SHORT).show();
+                        option2.setTextColor(Color.RED);
                     }
-                    getTest();
                 } catch (NumberFormatException ex) {
                     // Display message when exception occurs
                     System.out.println("--ERROR--");
@@ -83,11 +98,13 @@ public class Test extends  AppCompatActivity {
                 try {
                     if (Integer.parseInt(TestInfo.List_Questions_Maths[numberQ][5]) == 3) {
                         Toast.makeText(context,"Correct!", Toast.LENGTH_SHORT).show();
+                        option3.setTextColor(Color.GREEN);
+
                     }
                     else {
                         Toast.makeText(context,"Wrong!", Toast.LENGTH_SHORT).show();
+                        option3.setTextColor(Color.RED);
                     }
-                    getTest();
                 } catch (NumberFormatException ex) {
                     // Display message when exception occurs
                     System.out.println("--ERROR--");
@@ -97,11 +114,12 @@ public class Test extends  AppCompatActivity {
                 try {
                     if (Integer.parseInt(TestInfo.List_Questions_Maths[numberQ][5]) == 4) {
                         Toast.makeText(context,"Correct!", Toast.LENGTH_SHORT).show();
+                        option4.setTextColor(Color.GREEN);
                     }
                     else {
                         Toast.makeText(context,"Wrong!", Toast.LENGTH_SHORT).show();
+                        option4.setTextColor(Color.RED);
                     }
-                    getTest();
                 } catch (NumberFormatException ex) {
                     // Display message when exception occurs
                     System.out.println("--ERROR--");

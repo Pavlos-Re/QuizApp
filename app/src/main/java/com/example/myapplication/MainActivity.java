@@ -61,8 +61,7 @@ public class MainActivity extends localeHelper {
 
 
         //change actionbar title, if you dont change it will be according to your sustems default lang
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle(getResources().getString(R.string.app_name));
+        //ActionBar actionBar = getSupportActionBar();
 
         //Drawable d = Drawable.createFromPath(R.drawable.databases);
         final MediaPlayer media2 = MediaPlayer.create(MainActivity.this, R.raw.pop );
@@ -126,6 +125,8 @@ public class MainActivity extends localeHelper {
                 button2.setText(R.string.app_off_mus);
             }
         });
+
+        //actionBar.setTitle(getResources().getString(R.string.app_name));
 
     }
 
