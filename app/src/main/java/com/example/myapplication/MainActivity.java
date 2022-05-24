@@ -66,8 +66,8 @@ public class MainActivity extends localeHelper {
             public void onClick(View v) {
                 Log.i("SendMailActivity", "Send Button Clicked.");
 
-                String fromEmail = "";
-                String fromPassword = "";
+                String fromEmail = "quizappmp@gmail.com";
+                String fromPassword = "QuizApp12345";
                 String toEmails = ((TextView) findViewById(R.id.editText))
                         .getText().toString();
                 List toEmailList = Arrays.asList(toEmails
