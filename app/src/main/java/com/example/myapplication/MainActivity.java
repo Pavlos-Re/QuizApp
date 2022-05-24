@@ -22,6 +22,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,6 +31,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -57,6 +59,26 @@ public class MainActivity extends localeHelper {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = getBaseContext();
+        final Button send = (Button) this.findViewById(R.id.button);
+
+        send.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Log.i("SendMailActivity", "Send Button Clicked.");
+
+                String fromEmail = "";
+                String fromPassword = "";
+                String toEmails = ((TextView) findViewById(R.id.editText))
+                        .getText().toString();
+                List toEmailList = Arrays.asList(toEmails
+                        .split("\\s*,\\s*"));
+                Log.i("SendMailActivity", "To List: " + toEmailList);
+                String emailSubject = "Your Test results";
+                String emailBody = "Your test results indicate that blah blah blah";
+                new SendMailTask(MainActivity.this).execute(fromEmail,
+                        fromPassword, toEmailList, emailSubject, emailBody);
+            }
+        });
 
 
 
