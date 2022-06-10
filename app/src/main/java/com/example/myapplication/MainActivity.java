@@ -52,30 +52,13 @@ public class MainActivity extends localeHelper {
     int num1, num2;
     private static Context context;
     String current;
-    private final static String TAG = "MainActivity";
-    public final static String PREFS = "PrefsFile";
 
-    private SharedPreferences settings = null;
-    private SharedPreferences.Editor editor = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         current = Locale.getDefault().getLanguage();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // Save time of run:
-        settings = getSharedPreferences(PREFS, MODE_PRIVATE);
-        editor = settings.edit();
-
-        // First time running app?
-        if (!settings.contains("lastRun"))
-            enableNotification(null);
-        else
-            recordRunTime();
-
-        Log.v(TAG, "Starting CheckRecentRun service...");
-        startService(new Intent(this,  CheckRecentRun.class));
-
+        reminderNotification();
         context = getBaseContext();
         final Button send = (Button) this.findViewById(R.id.button);
 
@@ -169,22 +152,12 @@ public class MainActivity extends localeHelper {
         //actionBar.setTitle(getResources().getString(R.string.app_name));
 
     }
-    public void recordRunTime() {
-        editor.putLong("lastRun", System.currentTimeMillis());
-        editor.commit();
-    }
-
-    public void enableNotification(View v) {
-        editor.putLong("lastRun", System.currentTimeMillis());
-        editor.putBoolean("enabled", true);
-        editor.commit();
-        Log.v(TAG, "Notifications enabled");
-    }
-
-    public void disableNotification(View v) {
-        editor.putBoolean("enabled", false);
-        editor.commit();
-        Log.v(TAG, "Notifications disabled");
+    public void reminderNotification()
+    {
+        NotificationUtils _notificationUtils = new NotificationUtils(this);
+        long _currentTime = System.currentTimeMillis();
+        long oneDay = 1000 * 60 * 60 * 24;
+        _notificationUtils.setReminder(oneDay);
     }
     @Override
     protected void attachBaseContext(Context base) {
