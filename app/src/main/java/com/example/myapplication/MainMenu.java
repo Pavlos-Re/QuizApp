@@ -2,15 +2,27 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+
+import android.app.AlarmManager;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.icu.util.Calendar;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.Date;
 import java.util.Random;
 
 public class MainMenu extends AppCompatActivity {
@@ -39,7 +51,7 @@ public class MainMenu extends AppCompatActivity {
             if(counter==1)
                 getFact();
             else {
-                fun.setText("");
+                fun.setText(" ");
                 counter=0;
                 image = findViewById(R.id.smart_pic);
                 image.setVisibility(View.INVISIBLE);
@@ -107,6 +119,7 @@ public class MainMenu extends AppCompatActivity {
         image = findViewById(R.id.smart_pic);
         image.setVisibility(View.VISIBLE);
     }
+
 }
 
 

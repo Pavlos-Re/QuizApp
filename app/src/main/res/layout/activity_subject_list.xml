@@ -8,7 +8,7 @@
     tools:context=".SubjectList">
 
     <ImageView
-        android:id="@+id/computer_vision_icon"
+        android:id="@+id/computer_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,10 +17,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.248"
-        app:srcCompat="@drawable/computer_vision" />
+        app:srcCompat="@drawable/computer" />
 
     <ImageView
-        android:id="@+id/data_bases_icon"
+        android:id="@+id/internet_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,22 +29,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.251"
-        app:srcCompat="@drawable/databases" />
+        app:srcCompat="@drawable/internet" />
 
     <ImageView
-        android:id="@+id/internet_security_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/world_icon"
+        android:layout_width="57dp"
+        android:layout_height="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintHorizontal_bias="0.805"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.536"
-        app:srcCompat="@drawable/internet_security" />
+        app:layout_constraintVertical_bias="0.544"
+        app:srcCompat="@drawable/world" />
 
     <ImageView
-        android:id="@+id/physics_icon"
+        android:id="@+id/sports_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,7 +53,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.545"
-        app:srcCompat="@drawable/physics" />
+        app:srcCompat="@drawable/sports" />
 
     <ImageView
         android:id="@+id/maths_icon"
@@ -78,7 +78,7 @@
         app:layout_constraintHorizontal_bias="0.146"
         app:layout_constraintStart_toStartOf="parent"
         android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/computer_vision_icon"
+        app:layout_constraintTop_toBottomOf="@+id/computer_icon"
         app:layout_constraintVertical_bias="0.0"/>
 
     <TextView
@@ -93,7 +93,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.785"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/data_bases_icon"
+        app:layout_constraintTop_toBottomOf="@+id/internet_icon"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -107,7 +107,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/internet_security_icon"
+        app:layout_constraintTop_toBottomOf="@+id/sports_icon"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -120,10 +120,10 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintHorizontal_bias="0.791"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/physics_icon"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/world_icon"
+        app:layout_constraintVertical_bias="0.4" />
 
     <TextView
         android:id="@+id/textView10"
