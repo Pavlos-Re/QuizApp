@@ -1,11 +1,14 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -125,12 +128,20 @@ public class Test extends  AppCompatActivity {
             }
 
             remainingQuestions--;
-            if (remainingQuestions == 0) {
+            if (remainingQuestions < 0) {
+
+                question.setText(" ");
+                option1.setText(" ");
+                option2.setText(" ");
+                option3.setText(" ");
+                option4.setText(" ");
+
                 next_ques.setText("Finish");
                // Intent intent = new Intent(Test.this, High.class);
                 //int score = Score;
                // intent.putExtra("sub",subject);
                // startActivity(intent);
+                showScore();
             }
         }
 
@@ -259,5 +270,20 @@ public class Test extends  AppCompatActivity {
             });
 
         }
+
+    private void showScore() {
+        AlertDialog.Builder dialog=new AlertDialog.Builder(this);
+        dialog.setMessage("Your Score is:" + Score);
+        dialog.setTitle("Congratulations!");
+        dialog.setPositiveButton("OK!",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,
+                                        int which) {
+                        finish();
+                    }
+                });
+        AlertDialog alertDialog=dialog.create();
+        alertDialog.show();
+    }
 
     }
