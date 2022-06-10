@@ -62,7 +62,7 @@ public class NotificationUtils extends ContextWrapper
 
         AlarmManager _alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 
-        _alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(),timeInMillis, _pendingIntent);
+        _alarmManager.set(AlarmManager.RTC_WAKEUP, timeInMillis, _pendingIntent);
     }
 
 }

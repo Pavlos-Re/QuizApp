@@ -11,7 +11,7 @@ public class ReminderBroadcast extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent)
     {
         NotificationUtils _notificationUtils = new NotificationUtils(context);
-        NotificationCompat.Builder _builder = _notificationUtils.setNotification("QuizApp", "Ready for another Test?");
+        NotificationCompat.Builder _builder = _notificationUtils.setNotification("QuizApp","Welcome!");
         _notificationUtils.getManager().notify(101, _builder.build());
     }
 }

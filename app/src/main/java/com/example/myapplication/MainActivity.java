@@ -113,7 +113,7 @@ public class MainActivity extends localeHelper {
             media2.start();
             Intent intent3 = new Intent(MainActivity.this, Calculator.class);
             startActivity(intent3);
-                });
+        });
 
         gr.setOnClickListener(v -> {
             media2.start();
@@ -156,8 +156,8 @@ public class MainActivity extends localeHelper {
     {
         NotificationUtils _notificationUtils = new NotificationUtils(this);
         long _currentTime = System.currentTimeMillis();
-        long oneDay = 1000 * 60 * 60 * 24;
-        _notificationUtils.setReminder(oneDay);
+        long oneSecond = 1000;
+        _notificationUtils.setReminder(oneSecond);
     }
     @Override
     protected void attachBaseContext(Context base) {
@@ -175,7 +175,7 @@ public class MainActivity extends localeHelper {
         homePressed = true;
         button2 = findViewById(R.id.button_sound_on_off);
         if(!media.isPlaying())
-        button2.setText(R.string.app_off_mus);
+            button2.setText(R.string.app_off_mus);
         System.out.println("Status: OnResume");
     }
 
@@ -211,4 +211,4 @@ public class MainActivity extends localeHelper {
         return context;
     }
 
-    }
+}
