@@ -19,7 +19,7 @@ public class NotificationUtils extends ContextWrapper
     private Context _context;
 
     public NotificationUtils(Context base)
-    {
+    {//constructor
         super(base);
         _context = base;
         createChannel();
@@ -33,6 +33,7 @@ public class NotificationUtils extends ContextWrapper
                 .setContentText(body)
                 .setAutoCancel(true)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
     }
 
     private void createChannel()

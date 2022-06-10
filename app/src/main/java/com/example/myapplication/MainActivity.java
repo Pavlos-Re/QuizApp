@@ -156,7 +156,7 @@ public class MainActivity extends localeHelper {
     {
         NotificationUtils _notificationUtils = new NotificationUtils(this);
         long _currentTime = System.currentTimeMillis();
-        long oneSecond = 1000;
+        long oneSecond = 1000; //after one second display noti
         _notificationUtils.setReminder(oneSecond);
     }
     @Override
