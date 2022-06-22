@@ -21,11 +21,11 @@
     <string name="fact8">Tigers have striped skin, not just striped fur.</string>
     <string name="fact9">An ostrich\'s eye is bigger than its brain.</string>
     <string name="fact10">A cat has 32 muscles in each ear.</string>
-    <string name="subject1">Computer</string>
-    <string name="subject2">Internet</string>
-    <string name="subject3">World</string>
-    <string name="subject4">Sports</string>
-    <string name="subject5">Maths</string>
+    <string name="Computer">Computer</string>
+    <string name="Internet">Internet</string>
+    <string name="World">World</string>
+    <string name="Sports">Sports</string>
+    <string name="Maths">Maths</string>
     <string name="about">ABOUT</string>
     <string name="button_calc">CALCULATOR</string>
     <string name="button_back">BACK</string>
@@ -39,10 +39,13 @@
     <string name="num1">First number</string>
     <string name="num2">Second number</string>
     <string name="button_next">Next</string>
-    <string name="Maths">Maths</string>
-    <string name="Internet">Internet</string>
-    <string name="Sports">Sports</string>
-    <string name="World">World</string>
-    <string name="Computer">Computer</string>
+    <string name="button_cal">Calculator </string>
+    <string name="info0">Info</string>
+    <string name="info1">Would you like an email with additional info and your score?</string>
+    <string name="info2">"If yes, please enter your email address in the text bellow."</string>
+    <string name="affirmative">Yes,please!</string>
+    <string name="negative">No, thanks!</string>
+    <string name="score">Your score is: </string>
+    <string name="congratulations">Congratulations!</string>
 
 </resources>

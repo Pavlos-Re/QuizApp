@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.ImageView;
 
 public class SubjectList extends AppCompatActivity {
@@ -14,12 +13,11 @@ public class SubjectList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subject_list);
 
-        ImageView computer = (ImageView) findViewById(R.id.computer_icon);
-        ImageView maths = (ImageView) findViewById(R.id.maths_icon);
-        ImageView internet = (ImageView) findViewById(R.id.internet_icon);
-        ImageView sports = (ImageView) findViewById(R.id.sports_icon);
-        ImageView world = (ImageView) findViewById(R.id.world_icon);
-        Button button_back = (Button) findViewById(R.id.button_back);
+        ImageView computer = findViewById(R.id.computer_icon);
+        ImageView maths = findViewById(R.id.maths_icon);
+        ImageView internet = findViewById(R.id.internet_icon);
+        ImageView sports = findViewById(R.id.sports_icon);
+        ImageView world = findViewById(R.id.world_icon);
 
         computer.setOnClickListener(v -> {
             Intent intent = new Intent(SubjectList.this, Test.class);

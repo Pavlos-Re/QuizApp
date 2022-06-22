@@ -1,39 +1,12 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
-import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.res.Configuration;
-import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.util.Log;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends localeHelper {
@@ -42,14 +15,10 @@ public class MainActivity extends localeHelper {
     Button button;
     Button button2;
     Button button3;
-    Button button4;
     ImageView gr;
     ImageView en;
     int backButtonCount = 0;
     boolean homePressed = false;
-    EditText e1, e2;
-    TextView t1;
-    int num1, num2;
     private static Context context;
     String current;
 
@@ -60,40 +29,13 @@ public class MainActivity extends localeHelper {
         setContentView(R.layout.activity_main);
         reminderNotification();
         context = getBaseContext();
-        final Button send = (Button) this.findViewById(R.id.button);
 
-        send.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Log.i("SendMailActivity", "Send Button Clicked.");
-
-                String fromEmail = "quizappmp@gmail.com";
-                String fromPassword = "QuizApp12345";
-                String toEmails = ((TextView) findViewById(R.id.editText))
-                        .getText().toString();
-                List toEmailList = Arrays.asList(toEmails
-                        .split("\\s*,\\s*"));
-                Log.i("SendMailActivity", "To List: " + toEmailList);
-                String emailSubject = "Your Test results";
-                String emailBody = "Your test results indicate that blah blah blah";
-                new SendMailTask(MainActivity.this).execute(fromEmail,
-                        fromPassword, toEmailList, emailSubject, emailBody);
-            }
-        });
-
-
-
-        //change actionbar title, if you dont change it will be according to your sustems default lang
-        //ActionBar actionBar = getSupportActionBar();
-
-        //Drawable d = Drawable.createFromPath(R.drawable.databases);
         final MediaPlayer media2 = MediaPlayer.create(MainActivity.this, R.raw.pop );
         media = MediaPlayer.create(this, R.raw.street_soul);
 
         button = findViewById(R.id.button_begin);
         button2 = findViewById(R.id.button_sound_on_off);
         button3 = findViewById(R.id.button_about);
-        button4 = findViewById(R.id.button_calc);
         gr = findViewById(R.id.greek_flag);
         en = findViewById(R.id.uk_flag);
 
@@ -106,13 +48,6 @@ public class MainActivity extends localeHelper {
             media2.start();
             Intent intent2 = new Intent(MainActivity.this, About.class);
             startActivity(intent2);
-        });
-
-
-        button4.setOnClickListener(v -> {
-            media2.start();
-            Intent intent3 = new Intent(MainActivity.this, Calculator.class);
-            startActivity(intent3);
         });
 
         gr.setOnClickListener(v -> {
@@ -149,7 +84,6 @@ public class MainActivity extends localeHelper {
             }
         });
 
-        //actionBar.setTitle(getResources().getString(R.string.app_name));
 
     }
     public void reminderNotification()

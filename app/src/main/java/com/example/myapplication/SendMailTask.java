@@ -10,15 +10,15 @@ import android.util.Log;
 public class SendMailTask extends AsyncTask {
 
     private ProgressDialog statusDialog;
-    private Activity MainActivity;
+    private Activity Test;
 
     public SendMailTask(Activity activity) {
-        MainActivity = activity;
+        Test = activity;
 
     }
 
     protected void onPreExecute() {
-        statusDialog = new ProgressDialog(MainActivity);
+        statusDialog = new ProgressDialog(Test);
         statusDialog.setMessage("Getting ready...");
         statusDialog.setIndeterminate(false);
         statusDialog.setCancelable(false);

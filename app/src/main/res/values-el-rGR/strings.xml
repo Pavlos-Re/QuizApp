@@ -20,11 +20,6 @@
     <string name="fact8">Το δέρμα μιας τίγρη έχει ρίγες, όπως και η γούνα της.</string>
     <string name="fact9">Το μάτι μιας στρουθοκάμηλου είναι μεγαλύτερο από τον εγκέφαλό της.</string>
     <string name="fact10">Οι γάτες έχουν 32 μυς σε κάθε μάτι.</string>
-    <string name="subject1">Όραση υπολογιστών</string>
-    <string name="subject2">Βάσεις Δεδομένων</string>
-    <string name="subject3">Ασφάλεια Διαδικτύου</string>
-    <string name="subject4">Φυσική</string>
-    <string name="subject5">Μαθηματικά</string>
     <string name="about">ΣΧΕΤΙΚΑ</string>
     <string name="button_calc">ΑΡΙΘΜΟΜΗΧΑΝΗ</string>
     <string name="button_back">ΠΙΣΩ</string>
@@ -44,5 +39,12 @@
     <string name="Sports">Σπορ</string>
     <string name="World">Κόσμος</string>
     <string name="Computer">Υπολογιστές</string>
-
+    <string name="button_cal">Κομπιουτερακι</string>
+    <string name="info0">Πληροφορίες</string>
+    <string name="info1">Θα θέλατε να σας στείλουμε ηλεκτρονικό μήνυμα με επιπλέον πληροφορίες καθώς και με το σκορ σας;</string>
+    <string name="info2">Αν ναι, παρακαλώ συμπληρώστε την διεύθυνση του ηλεκτρονικού ταχυδρομείου σας παρακάτω.</string>
+    <string name="affirmative">Ναι, παρακαλώ!</string>
+    <string name="negative">Όχι, ευχαριστώ.</string>
+    <string name="score">Το σκορ σας είναι:</string>
+    <string name="congratulations">Συνχαρητήρια!</string>
 </resources>

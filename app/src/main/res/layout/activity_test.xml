@@ -6,9 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/whiteboard"
     tools:context=".Test">
-    <!--Edit text to enter course name-->
-
-    <!--edit text to enter course duration-->
 
     <TextView
         android:id="@+id/question"
@@ -30,62 +27,73 @@
         android:id="@+id/answer2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="311dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="311dp"
         android:fontFamily="casual"
         android:text="Answer2"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/answer4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.77" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/answer1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="311dp"
+        android:layout_marginEnd="247dp"
+        android:layout_marginBottom="311dp"
         android:fontFamily="casual"
         android:text="Answer1"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/answer3"
-        app:layout_constraintEnd_toStartOf="@+id/answer2"
-        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.77" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/answer4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="168dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="453dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="169dp"
         android:fontFamily="casual"
         android:text="Answer4"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/answer3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="168dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="453dp"
+        android:layout_marginEnd="247dp"
+        android:layout_marginBottom="169dp"
         android:fontFamily="casual"
         android:text="Answer3"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/answer4"
-        app:layout_constraintHorizontal_bias="0.37"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_next"
@@ -116,5 +124,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.042" />
 
+
+    <Button
+        android:id="@+id/button_cal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_cal"
+        app:cornerRadius="8dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.952" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,7 +2,6 @@ package com.example.myapplication;
 
 import java.util.Random;
 
-
 class TestInfo {
 
     static int prev_num = 0;
@@ -26,10 +25,10 @@ class TestInfo {
     };
 
     public static String[][] List_Questions_Internet = {
-            {"WWW stands for:","World Wide Web","Wireless World Web","World Wild Web","Wonderful World Web","1"},
+            {"WWW stands for:","World Wide\nWeb","Wireless World\nWeb","World Wild\nWeb","Wonderful World\nWeb","1"},
             {"During which decade did the Internet become visible to the general public?","the 1980s","the 1970s","the 1990s","the 200s","3"},
             {"Information on the internet is shared by:","Files","Packets","Forums","Messages","2"},
-            {"IP stands for:","Internet Protocol","Information Personal","In Protocol","Internet Preference","1"},
+            {"IP stands for:","Internet\nProtocol","Information\nPersonal","In Protocol","Internet\nPreference","1"},
             {"Which of the following are not a transport layer protocol?","IP","UDP","TCP","DCCP","1"}
     };
 
@@ -48,9 +47,6 @@ class TestInfo {
             {"Which continent is home to the most countries?","Asia","Europe","Africa","South America","3"},
             {"Which of these is NOT one of the 13 countries crossed by the Equator?","Kenya","Ecuador","Indonesia","Egypt","4"}
     };
-
-
-
 
 
     public static int setQuestion() {
