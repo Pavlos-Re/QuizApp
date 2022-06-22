@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/whiteboard"
     tools:context=".Test">
+    <!--Edit text to enter course name-->
 
+    <!--edit text to enter course duration-->
 
     <TextView
         android:id="@+id/question"
@@ -113,5 +115,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.042" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,5 +39,10 @@
     <string name="num1">Πρώτο Νούμερο</string>
     <string name="num2">Δεύτερο Νούμερο</string>
     <string name="button_next">Επόμενο</string>
+    <string name="Maths">Μαθηματικά</string>
+    <string name="Internet">Διαδίκτυο</string>
+    <string name="Sports">Σπορ</string>
+    <string name="World">Κόσμος</string>
+    <string name="Computer">Υπολογιστές</string>
 
 </resources>

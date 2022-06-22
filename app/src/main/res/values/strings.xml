@@ -39,5 +39,10 @@
     <string name="num1">First number</string>
     <string name="num2">Second number</string>
     <string name="button_next">Next</string>
+    <string name="Maths">Maths</string>
+    <string name="Internet">Internet</string>
+    <string name="Sports">Sports</string>
+    <string name="World">World</string>
+    <string name="Computer">Computer</string>
 
 </resources>

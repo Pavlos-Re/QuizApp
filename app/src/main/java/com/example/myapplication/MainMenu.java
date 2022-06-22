@@ -37,7 +37,6 @@ public class MainMenu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         context = this;
         media2 = MediaPlayer.create(this, R.raw.pop);
         media = MediaPlayer.create(this, R.raw.street_soul);
@@ -66,7 +65,9 @@ public class MainMenu extends AppCompatActivity {
         });
         Button button_high_score = (Button) findViewById(R.id.check_highscores_button);
         button_high_score.setOnClickListener(v -> {
+            Intent intent2 = new Intent(MainMenu.this, HighScores.class);
             media2.start();
+            startActivity(intent2);
         });
 
         }
