@@ -39,6 +39,7 @@ public class Test extends  AppCompatActivity {
     TextView Sports;
     SharedPreferences prefs;
     SharedPreferences.Editor editor;
+    int check;
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -62,6 +63,7 @@ public class Test extends  AppCompatActivity {
         highScore3 = prefs.getInt("score3",0);
         highScore4 = prefs.getInt("score4",0);
         highScore5 = prefs.getInt("score5",0);
+
 
         Button next_ques = findViewById(R.id.button_next);
         next_ques.setOnClickListener(v -> getTest(subject)
@@ -133,7 +135,7 @@ public class Test extends  AppCompatActivity {
 
                 check(num);
 
-                next_ques.setClickable(false);
+
 
             }
 
@@ -164,7 +166,6 @@ public class Test extends  AppCompatActivity {
 
                 check(num);
 
-                next_ques.setClickable(false);
 
             }
 
@@ -184,7 +185,7 @@ public class Test extends  AppCompatActivity {
 
                 check(num);
 
-                next_ques.setClickable(false);
+
 
             }
 
@@ -204,7 +205,6 @@ public class Test extends  AppCompatActivity {
 
                 check(num);
 
-                next_ques.setClickable(false);
 
             }
 
@@ -224,7 +224,7 @@ public class Test extends  AppCompatActivity {
 
                 check(num);
 
-                next_ques.setClickable(false);
+
 
             }
 
@@ -255,6 +255,7 @@ public class Test extends  AppCompatActivity {
             TextView option3 = findViewById(R.id.answer3);
             TextView option4 = findViewById(R.id.answer4);
             Button next_ques = findViewById(R.id.button_next);
+
 
             option1.setOnClickListener(v -> {
                 try {
