@@ -54,7 +54,7 @@ class TestInfo extends AppCompatActivity {
             {MainActivity.getStringGlobal(R.string.computer2),MainActivity.getStringGlobal(R.string.c_a5),MainActivity.getStringGlobal(R.string.c_a6),MainActivity.getStringGlobal(R.string.c_a7),MainActivity.getStringGlobal(R.string.c_a8),"3"},
             {MainActivity.getStringGlobal(R.string.computer3),MainActivity.getStringGlobal(R.string.c_a9),MainActivity.getStringGlobal(R.string.c_a10),MainActivity.getStringGlobal(R.string.c_a11),MainActivity.getStringGlobal(R.string.c_a12),"4"},
             {MainActivity.getStringGlobal(R.string.computer4),MainActivity.getStringGlobal(R.string.c_a13),MainActivity.getStringGlobal(R.string.c_a14),MainActivity.getStringGlobal(R.string.c_a15),MainActivity.getStringGlobal(R.string.c_a16),"2"},
-            {MainActivity.getStringGlobal(R.string.computer5),MainActivity.getStringGlobal(R.string.c_a13),MainActivity.getStringGlobal(R.string.c_a14),MainActivity.getStringGlobal(R.string.c_a15),MainActivity.getStringGlobal(R.string.c_a16),"2"}
+            {MainActivity.getStringGlobal(R.string.computer5),MainActivity.getStringGlobal(R.string.c_a13),MainActivity.getStringGlobal(R.string.c_a14),MainActivity.getStringGlobal(R.string.c_a15),MainActivity.getStringGlobal(R.string.c_a16),"3"}
     };
 
     public  String[][] List_Questions_World = {

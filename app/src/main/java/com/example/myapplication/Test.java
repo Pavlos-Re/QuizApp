@@ -255,6 +255,7 @@ public class Test extends localeHelper {
             TextView option2 = findViewById(R.id.answer2);
             TextView option3 = findViewById(R.id.answer3);
             TextView option4 = findViewById(R.id.answer4);
+
             Button next_ques = findViewById(R.id.button_next);
 
             next_ques.setClickable(false);
@@ -358,16 +359,16 @@ public class Test extends localeHelper {
                             case 3: option3.setTextColor(Color.GREEN);
                                     break;
                         }
-                        option1.setClickable(false);
-                        option2.setClickable(false);
-                        option3.setClickable(false);
-                        option4.setClickable(false);
-                        next_ques.setClickable(true);
                     }
                 } catch (NumberFormatException ex) {
                     // Display message when exception occurs
                     System.out.println("--ERROR--");
                 }
+                option1.setClickable(false);
+                option2.setClickable(false);
+                option3.setClickable(false);
+                option4.setClickable(false);
+                next_ques.setClickable(true);
             });
 
         }
