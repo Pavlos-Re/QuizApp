@@ -27,7 +27,6 @@ public class Test extends localeHelper {
 
     int Score = 0;
     int remainingQuestions = 5;
-
     int highScore1;
     int highScore2;
     int highScore3;

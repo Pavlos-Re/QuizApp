@@ -2,9 +2,7 @@ package com.example.myapplication;
 
 import android.content.Context;
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.Locale;
 import java.util.Random;
 
