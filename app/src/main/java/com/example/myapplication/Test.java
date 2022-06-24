@@ -39,7 +39,6 @@ public class Test extends  AppCompatActivity {
     TextView Sports;
     SharedPreferences prefs;
     SharedPreferences.Editor editor;
-    int check;
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -64,13 +63,12 @@ public class Test extends  AppCompatActivity {
         highScore4 = prefs.getInt("score4",0);
         highScore5 = prefs.getInt("score5",0);
 
-
         Button next_ques = findViewById(R.id.button_next);
         next_ques.setOnClickListener(v -> getTest(subject)
 
         );
 
-        //next_ques.setClickable(false);
+        next_ques.setClickable(false);
 
 }
 
@@ -136,7 +134,6 @@ public class Test extends  AppCompatActivity {
                 check(num);
 
 
-
             }
 
             if (subject.equals("Internet")) {
@@ -186,7 +183,6 @@ public class Test extends  AppCompatActivity {
                 check(num);
 
 
-
             }
 
             if (subject.equals("World")) {
@@ -225,7 +221,6 @@ public class Test extends  AppCompatActivity {
                 check(num);
 
 
-
             }
 
             remainingQuestions--;
@@ -244,6 +239,7 @@ public class Test extends  AppCompatActivity {
 
                 showScore(subject);
             }
+
         }
 
         public void check(int num) {
@@ -256,6 +252,7 @@ public class Test extends  AppCompatActivity {
             TextView option4 = findViewById(R.id.answer4);
             Button next_ques = findViewById(R.id.button_next);
 
+            next_ques.setClickable(false);
 
             option1.setOnClickListener(v -> {
                 try {
@@ -283,6 +280,8 @@ public class Test extends  AppCompatActivity {
                 option2.setClickable(false);
                 option3.setClickable(false);
                 option4.setClickable(false);
+                next_ques.setClickable(true);
+
             });
             option2.setOnClickListener(v -> {
                 try {
@@ -309,6 +308,7 @@ public class Test extends  AppCompatActivity {
                 option2.setClickable(false);
                 option3.setClickable(false);
                 option4.setClickable(false);
+                next_ques.setClickable(true);
             });
             option3.setOnClickListener(v -> {
                 try {
@@ -335,6 +335,7 @@ public class Test extends  AppCompatActivity {
                 option2.setClickable(false);
                 option3.setClickable(false);
                 option4.setClickable(false);
+                next_ques.setClickable(true);
             });
             option4.setOnClickListener(v -> {
                 try {
@@ -356,6 +357,7 @@ public class Test extends  AppCompatActivity {
                         option2.setClickable(false);
                         option3.setClickable(false);
                         option4.setClickable(false);
+                        next_ques.setClickable(true);
                     }
                 } catch (NumberFormatException ex) {
                     // Display message when exception occurs
@@ -363,7 +365,6 @@ public class Test extends  AppCompatActivity {
                 }
             });
 
-            next_ques.setClickable(true);
         }
 
     private void showScore(String subject) {
