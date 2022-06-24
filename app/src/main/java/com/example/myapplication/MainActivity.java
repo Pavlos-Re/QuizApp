@@ -2,15 +2,20 @@ package com.example.myapplication;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.annotation.StringRes;
+
+import java.lang.ref.WeakReference;
 import java.util.Locale;
 
 public class MainActivity extends localeHelper {
-
+    private static WeakReference<Resources> res;
     MediaPlayer media;
     Button button;
     Button button2;
@@ -21,12 +26,15 @@ public class MainActivity extends localeHelper {
     boolean homePressed = false;
     private static Context context;
     String current;
+    protected static MainActivity instance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         current = Locale.getDefault().getLanguage();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        res = new WeakReference<>(getResources());
+        instance=this;
         reminderNotification();
         context = getBaseContext();
 
@@ -144,5 +152,14 @@ public class MainActivity extends localeHelper {
     public static Context getAppContext() {
         return context;
     }
+    //this method is used in the TestInfo class so that we can use the string resources there.
+    //the reason why this is needed is because it is impossible to get the correct context in that class,
+    //and without the context we can't have access to the string resources.
+    public static String getStringGlobal(@StringRes int resId) {
+            return res.get().getString(resId);
+        }
+
+
+
 
 }

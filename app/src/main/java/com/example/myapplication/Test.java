@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.graphics.fonts.SystemFonts;
 import android.os.Bundle;
 import android.text.Editable;
 import android.widget.Button;
@@ -20,8 +21,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
-public class Test extends  AppCompatActivity {
+public class Test extends localeHelper {
 
     int Score = 0;
     int remainingQuestions = 5;
@@ -31,7 +33,7 @@ public class Test extends  AppCompatActivity {
     int highScore3;
     int highScore4;
     int highScore5;
-
+    private Locale currentLocal = null;
     TextView Math;
     TextView Computer;
     TextView Internet;
@@ -39,14 +41,17 @@ public class Test extends  AppCompatActivity {
     TextView Sports;
     SharedPreferences prefs;
     SharedPreferences.Editor editor;
+    TestInfo test;
+
 
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
         Intent intent = getIntent();
+        currentLocal = Locale.getDefault();
+        test = new TestInfo();
         String subject = intent.getStringExtra("sub");
-
         getTest(subject);
 
         Math = findViewById(R.id.Maths);
@@ -89,7 +94,7 @@ public class Test extends  AppCompatActivity {
             option3.setTextColor(Color.WHITE);
             option4.setTextColor(Color.WHITE);
 
-            int numberQ = TestInfo.setQuestion();
+            int numberQ = test.setQuestion();
 
             if (subject.equals("Maths")) {
 
@@ -123,13 +128,13 @@ public class Test extends  AppCompatActivity {
 
                 });
 
-                question.setText(TestInfo.List_Questions_Maths[numberQ][0]);
-                option1.setText(TestInfo.List_Questions_Maths[numberQ][1]);
-                option2.setText(TestInfo.List_Questions_Maths[numberQ][2]);
-                option3.setText(TestInfo.List_Questions_Maths[numberQ][3]);
-                option4.setText(TestInfo.List_Questions_Maths[numberQ][4]);
+                question.setText(test.List_Questions_Maths[numberQ][0]);
+                option1.setText(test.List_Questions_Maths[numberQ][1]);
+                option2.setText(test.List_Questions_Maths[numberQ][2]);
+                option3.setText(test.List_Questions_Maths[numberQ][3]);
+                option4.setText(test.List_Questions_Maths[numberQ][4]);
 
-                int num = Integer.parseInt(TestInfo.List_Questions_Maths[numberQ][5]);
+                int num = Integer.parseInt(test.List_Questions_Maths[numberQ][5]);
 
                 check(num);
 
@@ -148,18 +153,18 @@ public class Test extends  AppCompatActivity {
                 option4.setTextSize(17);
 
 
-                question.setText(TestInfo.List_Questions_Internet[numberQ][0]);
-                option1.setText(TestInfo.List_Questions_Internet[numberQ][1]);
-                option2.setText(TestInfo.List_Questions_Internet[numberQ][2]);
-                option3.setText(TestInfo.List_Questions_Internet[numberQ][3]);
-                option4.setText(TestInfo.List_Questions_Internet[numberQ][4]);
+                question.setText(test.List_Questions_Internet[numberQ][0]);
+                option1.setText(test.List_Questions_Internet[numberQ][1]);
+                option2.setText(test.List_Questions_Internet[numberQ][2]);
+                option3.setText(test.List_Questions_Internet[numberQ][3]);
+                option4.setText(test.List_Questions_Internet[numberQ][4]);
 
                 option1.setTextSize(20);
                 option2.setTextSize(20);
                 option3.setTextSize(20);
                 option4.setTextSize(20);
 
-                int num = Integer.parseInt(TestInfo.List_Questions_Internet[numberQ][5]);
+                int num = Integer.parseInt(test.List_Questions_Internet[numberQ][5]);
 
                 check(num);
 
@@ -172,13 +177,13 @@ public class Test extends  AppCompatActivity {
 
                 button_cal.setVisibility(Button.INVISIBLE);
 
-                question.setText(TestInfo.List_Questions_Computer[numberQ][0]);
-                option1.setText(TestInfo.List_Questions_Computer[numberQ][1]);
-                option2.setText(TestInfo.List_Questions_Computer[numberQ][2]);
-                option3.setText(TestInfo.List_Questions_Computer[numberQ][3]);
-                option4.setText(TestInfo.List_Questions_Computer[numberQ][4]);
+                question.setText(test.List_Questions_Computer[numberQ][0]);
+                option1.setText(test.List_Questions_Computer[numberQ][1]);
+                option2.setText(test.List_Questions_Computer[numberQ][2]);
+                option3.setText(test.List_Questions_Computer[numberQ][3]);
+                option4.setText(test.List_Questions_Computer[numberQ][4]);
 
-                int num = Integer.parseInt(TestInfo.List_Questions_Computer[numberQ][5]);
+                int num = Integer.parseInt(test.List_Questions_Computer[numberQ][5]);
 
                 check(num);
 
@@ -191,13 +196,13 @@ public class Test extends  AppCompatActivity {
 
                 button_cal.setVisibility(Button.INVISIBLE);
 
-                question.setText(TestInfo.List_Questions_World[numberQ][0]);
-                option1.setText(TestInfo.List_Questions_World[numberQ][1]);
-                option2.setText(TestInfo.List_Questions_World[numberQ][2]);
-                option3.setText(TestInfo.List_Questions_World[numberQ][3]);
-                option4.setText(TestInfo.List_Questions_World[numberQ][4]);
+                question.setText(test.List_Questions_World[numberQ][0]);
+                option1.setText(test.List_Questions_World[numberQ][1]);
+                option2.setText(test.List_Questions_World[numberQ][2]);
+                option3.setText(test.List_Questions_World[numberQ][3]);
+                option4.setText(test.List_Questions_World[numberQ][4]);
 
-                int num = Integer.parseInt(TestInfo.List_Questions_World[numberQ][5]);
+                int num = Integer.parseInt(test.List_Questions_World[numberQ][5]);
 
                 check(num);
 
@@ -210,13 +215,13 @@ public class Test extends  AppCompatActivity {
 
                 button_cal.setVisibility(Button.INVISIBLE);
 
-                question.setText(TestInfo.List_Questions_Sports[numberQ][0]);
-                option1.setText(TestInfo.List_Questions_Sports[numberQ][1]);
-                option2.setText(TestInfo.List_Questions_Sports[numberQ][2]);
-                option3.setText(TestInfo.List_Questions_Sports[numberQ][3]);
-                option4.setText(TestInfo.List_Questions_Sports[numberQ][4]);
+                question.setText(test.List_Questions_Sports[numberQ][0]);
+                option1.setText(test.List_Questions_Sports[numberQ][1]);
+                option2.setText(test.List_Questions_Sports[numberQ][2]);
+                option3.setText(test.List_Questions_Sports[numberQ][3]);
+                option4.setText(test.List_Questions_Sports[numberQ][4]);
 
-                int num = Integer.parseInt(TestInfo.List_Questions_Sports[numberQ][5]);
+                int num = Integer.parseInt(test.List_Questions_Sports[numberQ][5]);
 
                 check(num);
 
@@ -483,5 +488,12 @@ public class Test extends  AppCompatActivity {
         alertDialog1.show();
 
     }
-
+@Override
+ protected void onResume(){
+    super.onResume();
+    if (currentLocal.getLanguage() != Locale.getDefault().getLanguage()) {
+        currentLocal = Locale.getDefault();
+        recreate();
     }
+}
+}
