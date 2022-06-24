@@ -430,8 +430,6 @@ public class Test extends localeHelper {
         dialog1.setTitle(R.string.congratulations);
         dialog1.setPositiveButton("OK!",
                 (dialog, which) -> {
-                    //finish();
-
                     if(subject.equals("Maths")) {
                         if (highScore1 > Score) {
 
